@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How It Works | MealMate</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>MealMate</h1>
+    <p>Your AI-powered, personalized meal kit solution</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="process.html">How It Works</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>How It Works</h2>
+      <p>Answer 5 quick questions and let our AI build your perfect meal plan.</p>
+      <button onclick="startQuiz()">Start Quiz</button>
+    </section>
+
+    <section id="quiz" class="hidden">
+      <div id="question"></div>
+      <div id="answers"></div>
+      <button id="nextBtn" onclick="nextQuestion()">Next</button>
+    </section>
+
+    <section id="result" class="hidden">
+      <h3>Your Sample Meal:</h3>
+      <p id="sampleMeal"></p>
+      <a href="#" class="signup-button">Sign Up Now</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 MealMate Inc. | Smart Meals, Happy You</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
