@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How It Works - MealMate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="MealMate Logo" class="logo-small">
+        <h1>How MealMate Works</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Personalized Meal Matching</h2>
+            <p>Answer a few fun questions and we’ll suggest a meal just for you.</p>
+
+            <div id="quiz">
+                <form id="preferenceForm">
+                    <label>1. What's your favorite cuisine?</label><br>
+                    <select name="cuisine">
+                        <option>Italian</option>
+                        <option>Japanese</option>
+                        <option>Mexican</option>
+                        <option>Indian</option>
+                    </select><br><br>
+
+                    <label>2. Do you have any dietary restrictions?</label><br>
+                    <select name="diet">
+                        <option>None</option>
+                        <option>Vegetarian</option>
+                        <option>Vegan</option>
+                        <option>Gluten-Free</option>
+                    </select><br><br>
+
+                    <label>3. What's your spice tolerance?</label><br>
+                    <select name="spice">
+                        <option>Mild</option>
+                        <option>Medium</option>
+                        <option>Hot</option>
+                    </select><br><br>
+
+                    <label>4. How much time do you like to spend cooking?</label><br>
+                    <select name="time">
+                        <option>10-20 min</option>
+                        <option>20-40 min</option>
+                        <option>Over 40 min</option>
+                    </select><br><br>
+
+                    <label>5. Do you prefer bold or subtle flavors?</label><br>
+                    <select name="flavor">
+                        <option>Bold</option>
+                        <option>Subtle</option>
+                    </select><br><br>
+
+                    <button type="button" onclick="generateMeal()">Get My Meal</button>
+                </form>
+
+                <div id="mealResult" class="hidden"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MealMate. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function generateMeal() {
+            const mealOptions = [
+                "Spicy Chickpea Tikka Masala with Basmati Rice",
+                "Zesty Vegan Tacos with Avocado Lime Sauce",
+                "Creamy Mushroom Risotto with Truffle Oil",
+                "Miso Glazed Tofu with Steamed Bok Choy and Rice",
+                "Classic Margherita Flatbread with Fresh Basil"
+            ];
+            const result = document.getElementById('mealResult');
+            result.classList.remove('hidden');
+            result.innerHTML = `<h3>Your Sample Meal:</h3><p>${mealOptions[Math.floor(Math.random() * mealOptions.length)]}</p>
+            <p><a href="signup.html" class="signup-button">Sign Up Now</a></p>`;
+        }
+    </script>
+</body>
+</html>
